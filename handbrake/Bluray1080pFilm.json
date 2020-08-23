@@ -1,7 +1,7 @@
 {
     "PresetList": [
         {
-            "AlignAVStart": false,
+            "AlignAVStart": true,
             "AudioCopyMask": [
                 "copy:aac",
                 "copy:ac3"
@@ -39,15 +39,15 @@
                 }
             ],
             "AudioSecondaryEncoderMode": true,
-            "AudioTrackSelectionBehavior": "first",
-            "ChapterMarkers": true,
+            "AudioTrackSelectionBehavior": "all",
+            "ChapterMarkers": false,
             "ChildrenArray": [],
             "Default": false,
             "FileFormat": "av_mkv",
             "Folder": false,
             "FolderOpen": false,
             "InlineParameterSets": false,
-            "Mp4HttpOptimize": false,
+            "Mp4HttpOptimize": true,
             "Mp4iPodCompatible": false,
             "PictureAutoCrop": true,
             "PictureBottomCrop": 0,
@@ -91,10 +91,10 @@
             "PresetDescription": "",
             "PresetName": "Bluray1080pFilm",
             "SubtitleAddCC": false,
-            "SubtitleAddForeignAudioSearch": true,
+            "SubtitleAddForeignAudioSearch": false,
             "SubtitleAddForeignAudioSubtitle": false,
             "SubtitleBurnBDSub": false,
-            "SubtitleBurnBehavior": "foreign",
+            "SubtitleBurnBehavior": "none",
             "SubtitleBurnDVDSub": false,
             "SubtitleLanguageList": [
                 "any"
