@@ -96,10 +96,8 @@
             "SubtitleBurnBDSub": false,
             "SubtitleBurnBehavior": "none",
             "SubtitleBurnDVDSub": false,
-            "SubtitleLanguageList": [
-                "any"
-            ],
-            "SubtitleTrackSelectionBehavior": "all",
+            "SubtitleLanguageList": [],
+            "SubtitleTrackSelectionBehavior": "none",
             "Type": 1,
             "UsesPictureFilters": true,
             "UsesPictureSettings": 1,
