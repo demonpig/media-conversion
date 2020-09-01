@@ -9,6 +9,7 @@ as to what the final result of the conversion would be.
 | Codec     | x264    |                  |
 | Audio     | AAC 160 | AC-3 Passthrough |
 | Subtitles | N/A     |                  |
+| Container | MP4     |                  | 
 
 # How To
 * Install HandBrakeCLI and GNU Parallel
