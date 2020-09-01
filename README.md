@@ -1,8 +1,31 @@
 # Introduction
 
-This repo contains handbrake presets and scripts that I use on my media files. For the most part, I have standardized on x264 for video and mp3 for music. I know there are better formats but to me these two formats offer support for the widest range of devices.
+This repo contains handbrake presets and scripts used in converting videos that
+is playable on most devices. The table below should provide enough information
+as to what the final result of the conversion would be.
 
-## File Stucture
+| Videos    |         |                  |
+|-----------|---------|------------------|
+| Codec     | x264    |                  |
+| Audio     | AAC 160 | AC-3 Passthrough |
+| Subtitles | N/A     |                  |
 
-* `handbrake/` - Handbrake preset files for movies and tv shows
-* `scripts/` - Shell scripts that can be used to manipulate media files
+# How To
+* Install HandBrakeCLI and GNU Parallel
+* Place any videos, to be converted, in the `files/` directory
+* Execute the convert script
+
+```bash
+sh convert.sh <HandBrake Preset>
+```
+
+*Available Presets*
+* Bluray1080pAnimation
+* Bluray1080pFilm
+* DVD720pAnimation
+* DVD720pFilm
+* DVD480pAnimation
+* DVD480pFilm
+
+# License
+This project is licensed under the MIT license.
