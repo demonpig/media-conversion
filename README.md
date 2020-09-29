@@ -6,10 +6,10 @@ as to what the final result of the conversion would be.
 
 | Videos    |         |                  |
 |-----------|---------|------------------|
-| Codec     | x264    |                  |
-| Audio     | AAC 160 | AC-3 Passthrough |
+| Codec     | x265    |                  |
+| Audio     | Opus    | AC-3 Passthrough |
 | Subtitles | N/A     |                  |
-| Container | MP4     |                  | 
+| Container | MKV     |                  | 
 
 # How To
 * Install HandBrakeCLI and GNU Parallel
@@ -17,16 +17,16 @@ as to what the final result of the conversion would be.
 * Execute the convert script
 
 ```bash
-sh convert.sh <HandBrake Preset>
+sh -x convert.sh <HandBrake Preset>
 ```
 
 *Available Presets*
-* Bluray1080pAnimation
-* Bluray1080pFilm
-* DVD720pAnimation
-* DVD720pFilm
-* DVD480pAnimation
-* DVD480pFilm
+* HEVC-1080p-Animation.json
+* HEVC-1080p.json
+* HEVC-480p-Animation.json
+* HEVC-480p.json
+* HEVC-720p-Animation.json
+* HEVC-720p.json
 
 # License
 This project is licensed under the MIT license.
