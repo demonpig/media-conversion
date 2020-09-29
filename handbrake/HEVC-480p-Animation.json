@@ -3,10 +3,9 @@
         {
             "AlignAVStart": false,
             "AudioCopyMask": [
-                "copy:aac",
                 "copy:ac3"
             ],
-            "AudioEncoderFallback": "av_aac",
+            "AudioEncoderFallback": "opus",
             "AudioLanguageList": [
                 "eng",
                 "zho"
