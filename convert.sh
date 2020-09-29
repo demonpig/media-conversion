@@ -6,9 +6,10 @@ shopt -s globstar
 # Variables
 BASEPATH="$(dirname $0)"
 MEDIA_FILES_DIR="files"
+MEDIA_OUTPUT_DIR="converted"
 MEDIA_HB_DIR="handbrake"
-MEDIA_PRESET="DemonPresets"
 MEDIA_PRESET_FILENAME="${1-default}" ; MEDIA_PRESET_FILENAME="${MEDIA_PRESET_FILENAME%.json}.json"
+MEDIA_PRESET="${MEDIA_RESET_FILENAME%.json}"
 NO_PARALLEL=0
 
 # Checks
@@ -23,7 +24,7 @@ function parallel_convert(){
     $CMD_PL --eta --verbose -j2 HandBrakeCLI \
         --preset-import-file "$BASEPATH/$MEDIA_HB_DIR/$MEDIA_PRESET_FILENAME" \
         --preset "${MEDIA_PRESET}" \
-        -i {} -o $BASEPATH/$MEDIA_FILES_DIR/{/.}.mp4 ::: $BASEPATH/$MEDIA_FILES_DIR/*
+        -i {} -o $BASEPATH/$MEDIA_OUTPUT_DIR/{/.}.mkv ::: $BASEPATH/$MEDIA_FILES_DIR/*
 }
 
 function forloop_convert(){
@@ -31,11 +32,12 @@ function forloop_convert(){
         HandBrakeCLI \
             --preset-import-file "$BASEPATH/$MEDIA_HB_DIR/$MEDIA_PRESET_FILENAME" \
             --preset "$MEDIA_PRESET" \
-            -i "$file" -o "${file%.*}.mp4"
+            -i "$file" -o "$BASEPATH/$MEDIA_OUTPUT_DIR/${file%.*}.mkv"
     done
 }
 
 # Main
+mkdir -p $MEDIA_OUTPUT_DIR
 if [[ $NO_PARALLEL -eq 1 ]]; then
     forloop_convert
 else
